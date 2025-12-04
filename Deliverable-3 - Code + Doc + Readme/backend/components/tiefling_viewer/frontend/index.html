@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiefling Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+        #container {
+            width: 100%;
+            height: 1000px;
+            position: relative;
+            background: transparent;
+        }
+        canvas {
+            display: block;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        // Streamlit communication protocol
+        const RENDER_EVENT = "streamlit:render";
+
+        function sendMessage(type, data) {
+            const message = {
+                isStreamlitMessage: true,
+                type: type,
+                ...data
+            };
+            window.parent.postMessage(message, "*");
+        }
+
+        function setComponentReady() {
+            sendMessage("streamlit:componentReady", { apiVersion: 1 });
+        }
+
+        function setFrameHeight(height) {
+            sendMessage("streamlit:setFrameHeight", { height: height });
+        }
+
+        function setComponentValue(value) {
+            sendMessage("streamlit:setComponentValue", { value: value });
+        }
+
+        // Listen for render events from Streamlit
+        window.addEventListener("message", function(event) {
+            if (event.data.type === RENDER_EVENT) {
+                onRender(event.data.args);
+            }
+        });
+
+        // Tell Streamlit we're ready
+        setComponentReady();
+        setFrameHeight(1000);
+    </script>
+
+    <script type="module">
+        import { TieflingView } from './js/tiefling_view.js';
+
+        let viewer = null;
+
+        window.onRender = function(args) {
+            // Get parameters from Streamlit
+            const image = args.image;
+            const depthMap = args.depth_map;
+            const background = args.background;
+            const backgroundDepthMap = args.background_depth_map;
+            const mask = args.mask;
+            const focus = args.focus || 0.5;
+            const sensitivity = args.sensitivity || 0.5;
+            const radius = args.radius || 0;
+            const crop = args.crop || 0;
+            const foregroundSensitivity = args.foreground_sensitivity || 0.05;
+            const backgroundSensitivity = args.background_sensitivity || 1.0;
+            const groundedMode = args.grounded_mode !== undefined ? args.grounded_mode : true;
+
+            // Destroy existing viewer if any
+            if (viewer) {
+                viewer.destroy();
+                viewer = null;
+            }
+
+            // Clear container
+            const container = document.getElementById('container');
+            container.innerHTML = '';
+
+            // Create new viewer if we have required data
+            if (image && depthMap) {
+                viewer = TieflingView(container, image, depthMap, {
+                    background: background,
+                    backgroundDepthMap: backgroundDepthMap,
+                    mask: mask,
+                    focus: focus,
+                    baseMouseSensitivity: sensitivity,
+                    expandDepthmapRadius: radius,
+                    cropPercent: crop,
+                    foregroundSensitivity: foregroundSensitivity,
+                    backgroundSensitivity: backgroundSensitivity,
+                    groundedMode: groundedMode,
+                    devicePixelRatio: Math.min(window.devicePixelRatio, 2),
+                    meshResolution: 512,
+                    meshDepth: 1
+                });
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+# Core dependencies
+numpy>=1.24.0
+opencv-contrib-python==4.7.0.72
+Pillow>=10.0.0
+scipy>=1.11.0
+
+
+# Object detection & segmentation
+ultralytics>=8.0.0
+
+
+# Streamlit UI
+streamlit>=1.28.0
+streamlit-image-comparison>=0.0.4
+graphviz>=0.20.0
+streamlit_mermaid
+streamlit-drawable-canvas
+
+# Utilities
+requests>=2.31.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# deepgram
+deepgram-sdk>=3.0.0
+
+# swin ir
+timm
+
+# inpainting
+diffusers 
+transformers 
+accelerate 
+safetensors
+simple-lama-inpainting
+einops
+kornia
+
+# theme_changer
+onnxruntime==1.20.1
+huggingface_hub
+tensorflow==2.16.1
+
+
+# server
+fastapi
+uvicorn
+python-multipart
+deepgram-sdk

@@ -1,0 +1,32 @@
+<svg width="100%" height="100%" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="paint0_linear_58458_1349" x1="9.45761" y1="13.5763" x2="31.8087" y2="12.5565" gradientUnits="userSpaceOnUse">
+<stop offset="0.393459" stop-color="#9FCBFD"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_58458_1349" x1="8.44063" y1="6.63559" x2="15.429" y2="6.35922" gradientUnits="userSpaceOnUse">
+<stop offset="0.393459" stop-color="#9FCBFD"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint2_linear_58458_1349" x1="6" y1="10.2966" x2="10.7682" y2="10.1036" gradientUnits="userSpaceOnUse">
+<stop offset="0.393459" stop-color="#9FCBFD"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+  <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.055 0 0 0 0 0.647 0 0 0 0 0.914 0 0 0 0.6 0" result="blueGlow"/>
+  <feMerge>
+    <feMergeNode in="blueGlow"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+</defs>
+
+<g id="icon" filter="url(#glow)">
+<path d="M10.2712 13.0932V11.3136C10.2712 10.8051 10.8203 9.88984 11.7966 9.88984C12.7729 9.88984 12.8474 9.88984 12.7627 9.88984C13.5254 9.88985 13.8813 7.75427 14.9491 7.65257L18.0508 7.65257C19.4237 8.0085 19.322 9.53392 20.2372 9.78816H21.8644C22.5762 9.78816 23.2881 10.5 23.2881 11.4153V17.161M23.2881 17.161C23.2881 17.6186 22.322 17.9746 21.7627 17.9237L21.4576 17.8729C16.8305 16.6525 16.7288 12.0763 14.644 11.9746C13.4745 11.9746 9.55931 17.4153 9.45761 18.1271L9.45761 18.3305C9.45761 18.7881 9.91524 19.5 10.5763 19.5L20.7966 19.4492C22.1694 19.4492 23.2881 18.6864 23.2881 17.161Z" stroke="#AED3FD" stroke-linecap="round"/>
+<path d="M10.2712 13.0932V11.3136C10.2712 10.8051 10.8203 9.88984 11.7966 9.88984C12.7729 9.88984 12.8474 9.88984 12.7627 9.88984C13.5254 9.88985 13.8813 7.75427 14.9491 7.65257L18.0508 7.65257C19.4237 8.0085 19.322 9.53392 20.2372 9.78816H21.8644C22.5762 9.78816 23.2881 10.5 23.2881 11.4153V17.161M23.2881 17.161C23.2881 17.6186 22.322 17.9746 21.7627 17.9237L21.4576 17.8729C16.8305 16.6525 16.7288 12.0763 14.644 11.9746C13.4745 11.9746 9.55931 17.4153 9.45761 18.1271L9.45761 18.3305C9.45761 18.7881 9.91524 19.5 10.5763 19.5L20.7966 19.4492C22.1694 19.4492 23.2881 18.6864 23.2881 17.161Z" stroke="url(#paint0_linear_58458_1349)" stroke-linecap="round"/>
+<path d="M10.6271 4.5C10.6271 5.92372 9.10164 6.58474 8.44063 6.58474C9.10164 6.58474 10.6271 7.34745 10.6271 8.77117C10.6271 7.34745 12.1016 6.58474 12.7627 6.58474C12.1016 6.58474 10.6271 5.92372 10.6271 4.5Z" fill="url(#paint1_linear_58458_1349)" stroke="#AED3FD" stroke-width="0.5" stroke-linecap="round"/>
+<path d="M7.49192 8.87289C7.49192 9.83347 6.45105 10.2795 6 10.2795C6.45105 10.2795 7.49192 10.7598 7.49192 11.7203C7.49192 10.7598 8.4981 10.2795 8.94914 10.2795C8.4981 10.2795 7.49192 9.83347 7.49192 8.87289Z" fill="url(#paint2_linear_58458_1349)" stroke="#AED3FD" stroke-width="0.5" stroke-linecap="round"/>
+</g>
+</svg>
