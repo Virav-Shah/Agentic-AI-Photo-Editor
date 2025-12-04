@@ -9,8 +9,8 @@
 
   <!-- Links -->
   <p>
-    <a href="https://drive.google.com/file/d/1H5nRtaLZKNkMIfynW_wbGY22XYH0_jRg/view?usp=drive_link"><b>📄 Watch Demon</b></a>
-    <a href="DOCUMENTATION.md"><b>📄 Full Documentation</b></a>
+    <a href="https://drive.google.com/file/d/1H5nRtaLZKNkMIfynW_wbGY22XYH0_jRg/view?usp=drive_link"><b> Watch Demo |</b></a>
+    <a href="DOCUMENTATION.md"><b>Full Documentation</b></a>
   </p>
 
   <!-- Badges -->
