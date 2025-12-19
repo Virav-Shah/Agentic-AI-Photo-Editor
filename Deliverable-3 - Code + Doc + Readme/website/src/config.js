@@ -1,7 +1,7 @@
 const API_IP = '172.16.14.66';
 const API_PORT = '8000';
 
-export const API_BASE_URL = `http://${API_IP}:${API_PORT}`;
+export const API_BASE_URL = `http://192.168.0.24:8000`;
 
 export const ENDPOINTS = {
     THEME_CHANGE: `${API_BASE_URL}/tools/theme_change`,

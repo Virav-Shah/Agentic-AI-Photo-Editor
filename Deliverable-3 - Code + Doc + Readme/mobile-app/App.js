@@ -10,7 +10,7 @@ import * as Sensors from 'expo-sensors';
 import * as FileSystem from 'expo-file-system/legacy';
 
 // CHANGE THIS URL TO YOUR DESIRED WEBSITE
-const WEBSITE_URL = 'http://<IP>:5173/';
+const WEBSITE_URL = 'http://192.168.0.24:5173/';
 
 export default function App() {
   const webViewRef = useRef(null);
