@@ -533,7 +533,7 @@ Result: Enhanced image without car + pipeline visualization
 ---
 
 ### 5. 🔗Complete Editing Toolkit
-### 📊 Compute Efficiency Analysis (Corrected — SkySeg MOCK Everywhere)
+### 📊 Compute Efficiency Analysis 
 
 | Tool                         | Model                   | Parameters (Official) | Official / Paper Latency on 4090 (FP16) | Purpose                         |
 | ---------------------------- | ----------------------- | ---------------------- | ---------------------------------------- | -------------------------------- |
