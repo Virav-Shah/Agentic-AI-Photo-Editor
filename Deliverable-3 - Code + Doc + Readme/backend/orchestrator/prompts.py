@@ -1,6 +1,5 @@
 """
-Prompts adapter: re-export the system prompt and tool descriptions from
-the local copy in optimise package.
+Prompts adapter
 """
 
 try:
