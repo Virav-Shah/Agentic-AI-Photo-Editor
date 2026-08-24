@@ -1,4 +1,4 @@
-# **AI Photo Editor 2030 – Inter IIT Tech Meet 14 (Adobe Product Dev)**
+# **AI Photo Editor of 2030 – Inter IIT Tech Meet 14 (Adobe Product Dev)**
 
 A mobile-first, AI-assisted photo editing system built as a solution for the **Inter IIT Tech Meet 14 – Adobe Product Development Problem Statement**.
 
